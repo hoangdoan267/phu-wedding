@@ -150,16 +150,25 @@
 
         console.log(formData);
 
-        // $.ajax({
-        //     type: 'POST',
-        //     url: action,
-        //     data: formData
-        // }).done(function(response) {
-        //     $('.js-loader').hide();
-        //     $('.js-form-wrapper').hide();
-        //     $('.js-form-confirmation').show();
-        // });
+        $.ajax({
+            method: 'GET',
+            dataType: 'json',
+            url: 'https://script.google.com/macros/s/AKfycbwFJYvGqD30v2TpEmecDeM82o4q9-Liwfcgh7c7p2Bcchzh3sM/exec',
+            data: formData
+        }).done(function(response) {
+            $('.js-loader').hide();
+            $('.js-form-wrapper').hide();
+            $('.js-form-confirmation').show();
+        });
     });
+
+    function submitForm() {
+        $('.submit-form"').onClick(function(e) {
+            var $form = $('form#.js-form');
+            var formData = $form.serialize();
+            console.log(formData);
+        });
+    }
 
     /*==== 8. Functions ====*/
     // 8.1. Validate Email
