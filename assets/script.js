@@ -148,8 +148,6 @@
         $('.js-email').removeClass('error');
         $('.js-email-error').hide();
 
-        console.log(formData);
-
         $.ajax({
             method: 'GET',
             dataType: 'json',
@@ -166,7 +164,6 @@
         $('.submit-form"').onClick(function(e) {
             var $form = $('form#.js-form');
             var formData = $form.serialize();
-            console.log(formData);
         });
     }
 
