@@ -148,15 +148,17 @@
         $('.js-email').removeClass('error');
         $('.js-email-error').hide();
 
-        $.ajax({
-            type: 'POST',
-            url: action,
-            data: formData
-        }).done(function(response) {
-            $('.js-loader').hide();
-            $('.js-form-wrapper').hide();
-            $('.js-form-confirmation').show();
-        });
+        console.log(formData);
+
+        // $.ajax({
+        //     type: 'POST',
+        //     url: action,
+        //     data: formData
+        // }).done(function(response) {
+        //     $('.js-loader').hide();
+        //     $('.js-form-wrapper').hide();
+        //     $('.js-form-confirmation').show();
+        // });
     });
 
     /*==== 8. Functions ====*/
