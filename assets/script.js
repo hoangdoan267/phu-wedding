@@ -145,13 +145,13 @@
         }
 
         var formData = $form.serialize();
+        console.log(formData);
+
         $('.js-email').removeClass('error');
         $('.js-email-error').hide();
-
         $.ajax({
             method: 'GET',
-            dataType: 'json',
-            url: 'https://script.google.com/macros/s/AKfycbwFJYvGqD30v2TpEmecDeM82o4q9-Liwfcgh7c7p2Bcchzh3sM/exec',
+            url: 'https://script.google.com/macros/s/AKfycbwFJYvGqD30v2TpEmecDeM82o4q9-Liwfcgh7c7p2Bcchzh3sM/execs',
             data: formData
         }).done(function(response) {
             $('.js-loader').hide();
